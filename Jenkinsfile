@@ -31,12 +31,12 @@ pipeline {
 
         stage('Unit Test') {
             agent {
-                docker {
+                Docker {
                     image 'my-python-app' // This specifies to use the image built in the previous stage.
                 }
             }
             steps {
-                sh 'python -m unittest app_test.py'
+                sh 'python -m unittest test_app.py'
             }
         }
         
