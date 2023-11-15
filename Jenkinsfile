@@ -31,7 +31,7 @@ pipeline {
 
         stage('Unit Test') {
             agent {
-                Docker {
+                docker {
                     image 'my-python-app' // This specifies to use the image built in the previous stage.
                 }
             }
